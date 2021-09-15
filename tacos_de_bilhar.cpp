@@ -2,22 +2,21 @@
 
 using namespace std;
 
-int main(){
+long double t[1000005];
 
-    int n;
-
-    cin >>n;
-
-    set<int> tacos;
-
-    for(int i=0; i<n;i++){
-        int tmp;
-        cin >> tmp;
-
-        tacos.insert(tmp);
-    }
-
-    cout << tacos.size()*2 << endl;
-
-    return 0;
+int main (){
+	long long int n, p, cont=0;
+	cin >> n;
+	for( long long int i=0; i<n; i++){
+		cin >> p;
+		if( t[p]==0){
+			t[p]=1;
+			cont += 2;
+		}
+		else{
+			t[p]--;
+		}
+	}
+	cout << cont << endl;
+	return 0;
 }
