@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>=
+
+using namespace std;
+
+int main(){
+
+    int troco=0, total=0, resto, dividendo;
+
+    cin >> troco;
+
+    if( troco>=100 ){
+        dividendo = troco/100;
+        total += dividendo;
+        troco = troco%100; 
+    }
+
+    if(troco>=50){
+        dividendo = troco/50;
+        total += dividendo;
+        troco = troco%50; 
+    }
+
+    if(troco>=25){
+        dividendo = troco/25;
+        total += dividendo;
+        troco = troco%25; 
+    }
+
+    if(troco>=10){
+        dividendo = troco/10;
+        total += dividendo;
+        troco = troco%10; 
+    }
+
+    if( troco>=5){
+        dividendo = troco/5;
+        total += dividendo;
+        troco = troco%5; 
+    }
+
+    if( troco>= 1){
+        dividendo = troco/1;
+        total += dividendo;
+    }
+
+    cout << total;
+    return 0;
+}
